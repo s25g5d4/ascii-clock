@@ -21,7 +21,7 @@ Node.js >= 6.
 
 3-line:
 
-`node ascii-3line.js`
+`node ascii-clock-3line.js`
 
 Note in text mode some characters might not be displayed correctly.
 
