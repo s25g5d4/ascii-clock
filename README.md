@@ -1,7 +1,7 @@
 Node.js ASCII Clock
 =================================================
 
-Write just for fun.
+Write just for fun. See demo [here](https://s25g5d4.github.io/ascii-clock/).
 
 ![Running in Windows CMD](cmd.png)
 
