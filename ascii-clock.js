@@ -165,7 +165,7 @@ const displayTime = () => {
   asciiTime = addAsciiNumber(asciiTime, (date.getSeconds()).toString().padStart(2, '0').split('').map(e => +e));
   console.log(asciiTime.map(e => e.join('')).join('\n'));
 
-  setTimeout(displayTime, 1000 - (date.getTime() % 1000));
+  setTimeout(displayTime, 1000 - (Date.now() % 1000));
 };
 
 displayTime();
