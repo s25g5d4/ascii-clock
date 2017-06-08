@@ -11,7 +11,7 @@ Write just for fun.
 
 ![Running in Windows CMD](cmd-3line.png)
 
-![Running in bash](bash-line.png)
+![Running in bash](bash-3line.png)
 
 ## Run
 
