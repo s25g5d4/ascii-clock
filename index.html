@@ -1,0 +1,56 @@
+<!doctype html>
+<meta charset="utf-8">
+<script src="ascii-clock.js"></script>
+<script src="ascii-clock-3line.js"></script>
+<body>
+  <pre id="output1" style="font-family: 'courier new';"></pre><br>
+  <button id="stop1">stop</button>
+  <hr>
+  <pre id="output2" style="font-family: 'courier new';"></pre><br>
+  <button id="stop2">stop 3line</button>
+  <script>
+    const asciiClock3line = asciiClock.original;
+
+    const start1 = () => {
+      const output1 = document.getElementById('output1');
+      asciiClock.displayTime((str) => output1.textContent += str + '\n', () => output1.textContent = '');
+    };
+
+    const start2 = () => {
+      const output2 = document.getElementById('output2');
+      asciiClock3line.displayTime((str) => output2.textContent += str + '\n', () => output2.textContent = '');
+    };
+
+    const stop1 = () => {
+      asciiClock.stop();
+    };
+
+    const stop2 = () => {
+      asciiClock3line.stop();
+    };
+
+    start1();
+    start2();
+
+    document.getElementById('stop1').addEventListener('click', (event) => {
+      if (event.target.textContent.match(/stop/)) {
+        stop1();
+        event.target.textContent = 'start';
+      }
+      else {
+        start1();
+        event.target.textContent = 'stop';
+      }
+    });
+    document.getElementById('stop2').addEventListener('click', (event) => {
+      if (event.target.textContent.match(/stop/)) {
+        stop2();
+        event.target.textContent = 'start 3line';
+      }
+      else {
+        start2();
+        event.target.textContent = 'stop 3line';
+      }
+    });
+  </script>
+</body>
