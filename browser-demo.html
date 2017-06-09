@@ -4,10 +4,10 @@
 <script src="ascii-clock-3line.js"></script>
 <body>
   <pre id="output1" style="font-family: 'courier new';"></pre><br>
-  <button id="stop1">stop</button>
+  <button id="stop1">stop 3line</button>
   <hr>
   <pre id="output2" style="font-family: 'courier new';"></pre><br>
-  <button id="stop2">stop 3line</button>
+  <button id="stop2">stop</button>
   <script>
     const asciiClock3line = asciiClock.original;
 
@@ -35,21 +35,21 @@
     document.getElementById('stop1').addEventListener('click', (event) => {
       if (event.target.textContent.match(/stop/)) {
         stop1();
-        event.target.textContent = 'start';
+        event.target.textContent = 'start 3line';
       }
       else {
         start1();
-        event.target.textContent = 'stop';
+        event.target.textContent = 'stop 3line';
       }
     });
     document.getElementById('stop2').addEventListener('click', (event) => {
       if (event.target.textContent.match(/stop/)) {
         stop2();
-        event.target.textContent = 'start 3line';
+        event.target.textContent = 'start';
       }
       else {
         start2();
-        event.target.textContent = 'stop 3line';
+        event.target.textContent = 'stop';
       }
     });
   </script>
